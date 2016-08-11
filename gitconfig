@@ -1,0 +1,7 @@
+[user]
+	name = Kalantojus Karolis
+	email = karolis.kalantojus@gmail.com
+[merge]
+	tool = meld
+[color]
+	ui = true

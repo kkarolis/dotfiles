@@ -1,0 +1,48 @@
+[global_config]
+  borderless = True
+  enabled_plugins = InactivityWatch, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  tab_position = hidden
+  title_inactive_fg_color = "#e5c200"
+[keybindings]
+  move_tab_left = <Primary><Shift>Left
+  move_tab_right = <Primary><Shift>Right
+  next_profile = <Shift>Page_Up
+  next_tab = <Shift>Right
+  prev_tab = <Shift>Left
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#121212"
+    background_darkness = 0.84
+    background_image = None
+    background_type = transparent
+    cursor_color = "#c20257"
+    custom_command = TERM=xterm-256color zsh
+    font = Meslo LG S DZ for Powerline 12
+    foreground_color = "#ffffff"
+    palette = "#181915:#7a0137:#498702:#c5bb63:#3465a4:#75507b:#4194b0:#d3d7cf:#45473c:#e00265:#6dca04:#e6db74:#1d71ca:#af5fff:#5cd1f8:#ffffff"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_custom_command = True
+    use_system_font = False
+  [[production]]
+    background_darkness = 0.84
+    background_image = None
+    background_type = transparent
+    cursor_color = "#c20257"
+    custom_command = TERM=xterm-256color zsh
+    font = Meslo LG S DZ for Powerline 12
+    foreground_color = "#e53c00"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    use_custom_command = True
+    use_system_font = False
