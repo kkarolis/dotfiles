@@ -1,10 +1,8 @@
 # Path to your oh-my-zsh installation.
 setopt HIST_IGNORE_SPACE
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
-. /usr/share/zsh/site-contrib/powerline.zsh
-. $HOME/bin/gitlib.sh
-. $HOME/.zsh/plugins/bd/bd.zsh
+# . $HOME/.zsh/plugins/bd/bd.zsh
 . /usr/share/fzf/key-bindings.zsh
 
 export EDITOR=nvim
@@ -15,6 +13,7 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/:/lib64"
 ZSH_THEME="agnoster"
 plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
+XDG_CONFIG_HOME=$HOME/.config
 
 # User configuration
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:$HOME/bin:$HOME/programs/CppUTest/scripts:/usr/bin/vendor_perl/:/opt/cuda/bin"

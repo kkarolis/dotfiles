@@ -1,6 +1,7 @@
 [global_config]
   borderless = True
   enabled_plugins = InactivityWatch, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  handle_size = 1
   tab_position = hidden
   title_inactive_fg_color = "#e5c200"
 [keybindings]
