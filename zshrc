@@ -3,7 +3,9 @@ setopt HIST_IGNORE_SPACE
 export ZSH=/usr/share/oh-my-zsh
 
 # . $HOME/.zsh/plugins/bd/bd.zsh
+. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 . /usr/share/fzf/key-bindings.zsh
+
 
 export EDITOR=nvim
 export GOPATH="$HOME/.gosrc"
@@ -49,12 +51,12 @@ function start_agent {
 # SSH agent startup {{{
 ssha() {
     if [ -f "${SSH_ENV}" ]; then
-         . "${SSH_ENV}" > /dev/null
-         ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-    	start_agent;
-        }
+	 . "${SSH_ENV}" > /dev/null
+	 ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+	    start_agent;
+	}
     else
-        start_agent;
+	start_agent;
     fi
 }
 # }}}
@@ -102,17 +104,17 @@ docker-start() {
     current_command=${@:2}
     container=$1
     if [ -z "$prev_command" ]; then
-        docker-compose run --name $container --service-ports odoo $current_command
+	docker-compose run --name $container --service-ports odoo $current_command
     else
-        if [ "$prev_command" = "$current_command" ]; then
-            docker stop -t 0 $container 2> /dev/null
-            docker-compose start
-            docker start -ai $container
-        else
-            docker stop -t 0 $container > /dev/null
-            docker rm $container > /dev/null
-            docker-compose run --name $container --service-ports odoo $current_command
-        fi
+	if [ "$prev_command" = "$current_command" ]; then
+	    docker stop -t 0 $container 2> /dev/null
+	    docker-compose start
+	    docker start -ai $container
+	else
+	    docker stop -t 0 $container > /dev/null
+	    docker rm $container > /dev/null
+	    docker-compose run --name $container --service-ports odoo $current_command
+	fi
     fi
 }
 
@@ -155,7 +157,7 @@ pollen-dir-build() {
 pollen-build() {
     for dir in "$@"
     do
-        pollen-dir-build $dir
+	pollen-dir-build $dir
     done
 }
 
