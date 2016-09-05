@@ -1,7 +1,7 @@
 chromium/*
 dconf/*
 nvim/*
-nvim
+!nvim/init.vim
 Trolltech.conf
 keepassx/*
 pulse/*
