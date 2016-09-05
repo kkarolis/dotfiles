@@ -8,6 +8,7 @@ export ZSH=/usr/share/oh-my-zsh
 
 
 export EDITOR=nvim
+export SUDO_EDITOR=nvim
 export GOPATH="$HOME/.gosrc"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/:/lib64"
 

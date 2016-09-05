@@ -4,6 +4,9 @@
 
 - clean: ['~']
 
+- shell:
+  - mkdir -p ~/.wallpaper
+
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
@@ -11,6 +14,7 @@
     ~/.config: config
     ~/.zshrc: zshrc
     ~/.nvimrc: nvimrc
+    ~/.fehbg: fehbg
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
